@@ -1,0 +1,10 @@
+{% extends 'MainPage.html' %}
+
+
+{% block content %}
+<div class="form-control">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <a class="btn btn-secondary" href="{% url 'translated' %}">Translate</a>
+</div>
+{% endblock %}
